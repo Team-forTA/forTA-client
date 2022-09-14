@@ -1,20 +1,33 @@
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier'],
-  root: true,
   env: {
     browser: true,
     amd: true,
     node: true,
   },
-  rules: {
-    'no-console': 1,
-    'prettier/prettier': 'error',
-    quotes: ['error', 'single'],
-    semi: ['error', 'always'],
-  },
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 6,
+  },
+  plugins: ['@typescript-eslint', 'prettier'],
+  root: true,
+  rules: {
+    '@typescript-eslint/no-unused-vars': [
+      'warn', // or error
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+      },
+    ],
+    'no-console': 1,
+    'prettier/prettier': 'error',
+    semi: ['error', 'always'],
+  },
+  settings: {
+    react: {
+      pragma: 'React',
+      version: 'detect',
+    },
   },
 };
