@@ -34,7 +34,7 @@
       "pre-push": "yarn test"
     },
     "lint-staged": {
-      "*.js": [
+      "*.tsx": [
         "eslint --fix",
         "prettier --write"
       ]
