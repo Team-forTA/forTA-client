@@ -54,6 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:1722188f372a74db5093000e3a37bb5c7c44cbb5f64628e679bb59ec578347af1972628ea175be759de9ab8c4ab12e96e261ed96edef9c57b17d5e20af84ed56#npm:18.2.0"],\
             ["react-scripts", "virtual:1722188f372a74db5093000e3a37bb5c7c44cbb5f64628e679bb59ec578347af1972628ea175be759de9ab8c4ab12e96e261ed96edef9c57b17d5e20af84ed56#npm:5.0.1"],\
+            ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
@@ -9382,6 +9383,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:1722188f372a74db5093000e3a37bb5c7c44cbb5f64628e679bb59ec578347af1972628ea175be759de9ab8c4ab12e96e261ed96edef9c57b17d5e20af84ed56#npm:18.2.0"],\
             ["react-scripts", "virtual:1722188f372a74db5093000e3a37bb5c7c44cbb5f64628e679bb59ec578347af1972628ea175be759de9ab8c4ab12e96e261ed96edef9c57b17d5e20af84ed56#npm:5.0.1"],\
+            ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
