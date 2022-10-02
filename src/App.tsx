@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Header } from 'components/common';
+import { AppRoute } from 'App.routes';
+import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
-  const [serverStatus, setServerStatus] = useState(false);
-
-  useEffect(() => {
-    setServerStatus(false);
-  }, []);
-
   return (
     <div className="App">
-      <div>initial setting</div>
-      <div>check server = {serverStatus ? 'connected' : 'not connected'}</div>
+      <CssBaseline />
+      <Header />
+      <AppRoute />
     </div>
   );
 }
