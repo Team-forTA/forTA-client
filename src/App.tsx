@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function App() {
-  return <div className="App">initial setting</div>;
+  const [serverStatus, setServerStatus] = useState(false);
+
+  useEffect(() => {
+    setServerStatus(false);
+  }, []);
+
+  return (
+    <div className="App">
+      <div>initial setting</div>
+      <div>check server = {serverStatus ? 'connected' : 'not connected'}</div>
+    </div>
+  );
 }
 
 export default App;
