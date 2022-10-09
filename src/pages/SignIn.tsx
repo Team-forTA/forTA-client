@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, styled, TextField } from '@mui/material';
 import { CenteredLayout } from 'components/layout';
-import { Hspace } from 'components/common';
+import { Hspace, TextLink } from 'components/common';
 
 const StyledFormWrapper = styled('div')`
   display: flex;
@@ -16,7 +16,7 @@ const SignIn: React.FC = () => {
         <Box
           component="form"
           sx={{
-            width: '240px',
+            width: '250px',
             display: 'flex',
             flexDirection: 'column',
           }}
@@ -31,6 +31,10 @@ const SignIn: React.FC = () => {
           />
           <Hspace height={1} />
           <Button variant="contained">Sign In</Button>
+          <Hspace height={0.5} />
+          <div>
+            If you don't have account, <TextLink to="/signUp" name="Sign Up" />
+          </div>
         </Box>
       </StyledFormWrapper>
     </CenteredLayout>
