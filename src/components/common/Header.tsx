@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/system';
-import BasicLink from './BasicLink';
+import TextLink from './TextLink';
 
 const StyledHeader = styled('header')({
   height: '60px',
@@ -15,7 +15,7 @@ const StyledHeader = styled('header')({
 const Header: React.FC = () => {
   return (
     <StyledHeader>
-      <BasicLink to="/" name="forTA" />
+      <TextLink to="/" name="forTA" />
     </StyledHeader>
   );
 };
