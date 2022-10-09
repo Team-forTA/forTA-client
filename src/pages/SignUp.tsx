@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Button, ButtonGroup, styled, TextField } from '@mui/material';
 import { CenteredLayout } from 'components/layout';
 import { Hspace } from 'components/common';
@@ -8,7 +8,11 @@ const StyledFormWrapper = styled('div')`
   justify-content: center;
 `;
 
+type SelectButton = 0 | 1 | 2;
+
 const SignUp: React.FC = () => {
+  const [selectButton, setSelectButton] = useState<SelectButton>(0);
+
   return (
     <CenteredLayout>
       <Hspace height={5} />
@@ -40,8 +44,22 @@ const SignUp: React.FC = () => {
           />
           <Hspace height={1} />
           <ButtonGroup fullWidth>
-            <Button variant="outlined">Teacher</Button>
-            <Button variant="outlined">Student</Button>
+            <Button
+              variant={selectButton == 1 ? 'contained' : 'outlined'}
+              onClick={() => {
+                setSelectButton(1);
+              }}
+            >
+              Teacher
+            </Button>
+            <Button
+              variant={selectButton == 2 ? 'contained' : 'outlined'}
+              onClick={() => {
+                setSelectButton(2);
+              }}
+            >
+              Student
+            </Button>
           </ButtonGroup>
           <Hspace height={1} />
           <Button variant="contained">Sign UP</Button>
