@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
 
 const StyledLink = styled(Link)({
-  color: 'darkslategray',
   textDecoration: 'none',
+  color: 'inherit',
 });
 
 interface StyledLinkProps {
@@ -12,8 +12,8 @@ interface StyledLinkProps {
   name: string;
 }
 
-const BasicLink: React.FC<StyledLinkProps> = ({ to, name }) => {
+const TextLink: React.FC<StyledLinkProps> = ({ to, name }) => {
   return <StyledLink to={to}>{name}</StyledLink>;
 };
 
-export default BasicLink;
+export default TextLink;
