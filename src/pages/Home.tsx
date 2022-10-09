@@ -7,17 +7,17 @@ const Home: React.FC = () => {
   return (
     <CenteredLayout>
       <div>Home</div>
-      <Button variant="contained">
-        <TextLink to="/signIn" name="Sign In" />
-      </Button>
+      <TextLink to="/signIn">
+        <Button variant="contained">Sign In</Button>
+      </TextLink>
       <Wspace width={1} />
-      <Button variant="contained">
-        <TextLink to="/signUp" name="Sign Up" />
-      </Button>
+      <TextLink to="/signUp">
+        <Button variant="contained">Sign Up</Button>
+      </TextLink>
       <Hspace height={2} />
-      <Button variant="contained">
-        <TextLink to="/" name="GO" />
-      </Button>
+      <TextLink to="/">
+        <Button variant="contained">GO</Button>
+      </TextLink>
     </CenteredLayout>
   );
 };
