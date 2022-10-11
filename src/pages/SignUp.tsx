@@ -14,10 +14,8 @@ enum Auth {
   Student = 2,
 }
 
-type SelectAuth = Auth;
-
 const SignUp: React.FC = () => {
-  const [selectAuth, setSelectAuth] = useState<SelectAuth>(Auth.None);
+  const [selectedAuth, setSelectedAuth] = useState(Auth.None);
 
   return (
     <CenteredLayout>
@@ -52,17 +50,17 @@ const SignUp: React.FC = () => {
           <Hspace height={1} />
           <ButtonGroup fullWidth>
             <Button
-              variant={selectAuth == Auth.Teacher ? 'contained' : 'outlined'}
+              variant={selectedAuth == Auth.Teacher ? 'contained' : 'outlined'}
               onClick={() => {
-                setSelectAuth(Auth.Teacher);
+                setSelectedAuth(Auth.Teacher);
               }}
             >
               Teacher
             </Button>
             <Button
-              variant={selectAuth == Auth.Student ? 'contained' : 'outlined'}
+              variant={selectedAuth == Auth.Student ? 'contained' : 'outlined'}
               onClick={() => {
-                setSelectAuth(Auth.Student);
+                setSelectedAuth(Auth.Student);
               }}
             >
               Student
