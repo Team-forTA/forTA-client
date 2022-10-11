@@ -8,14 +8,21 @@ const StyledFormWrapper = styled('div')`
   justify-content: center;
 `;
 
-type SelectButton = 0 | 1 | 2;
+enum Auth {
+  None = 0,
+  Teacher = 1,
+  Student = 2,
+}
+
+type SelectAuth = Auth;
 
 const SignUp: React.FC = () => {
-  const [selectButton, setSelectButton] = useState<SelectButton>(0);
+  const [selectAuth, setSelectAuth] = useState<SelectAuth>(Auth.None);
 
   return (
     <CenteredLayout>
       <Hspace height={5} />
+
       <StyledFormWrapper>
         <Box
           component="form"
@@ -45,17 +52,17 @@ const SignUp: React.FC = () => {
           <Hspace height={1} />
           <ButtonGroup fullWidth>
             <Button
-              variant={selectButton == 1 ? 'contained' : 'outlined'}
+              variant={selectAuth == Auth.Teacher ? 'contained' : 'outlined'}
               onClick={() => {
-                setSelectButton(1);
+                setSelectAuth(Auth.Teacher);
               }}
             >
               Teacher
             </Button>
             <Button
-              variant={selectButton == 2 ? 'contained' : 'outlined'}
+              variant={selectAuth == Auth.Student ? 'contained' : 'outlined'}
               onClick={() => {
-                setSelectButton(2);
+                setSelectAuth(Auth.Student);
               }}
             >
               Student
