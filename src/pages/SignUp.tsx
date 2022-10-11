@@ -8,7 +8,7 @@ const StyledFormWrapper = styled('div')`
   justify-content: center;
 `;
 
-enum Auth {
+const enum Auth {
   None = 0,
   Teacher = 1,
   Student = 2,
